@@ -56,7 +56,6 @@
       @enderror
       <input id="body" type="hidden" name="body" value="{{old('body')}}">
       <trix-editor input="body"></trix-editor>
-      
     </div>
    
     <button type="submit" class="btn btn-primary">Create Post</button>
@@ -78,17 +77,17 @@
     })
 
     function previewImage(){
-    const image = document.querySelector('#image');
-    const imgPreview = document.querySelector('.img-preview');
+      const image = document.querySelector('#image');
+      const imgPreview = document.querySelector('.img-preview');
 
-    imgPreview.style.display = 'block';
+      imgPreview.style.display = 'block';
 
-    const oFReader = new FileReader();
-    oFReader.readAsDataURL(image.files[0]);
+      const oFReader = new FileReader();
+      oFReader.readAsDataURL(image.files[0]);
 
-    oFReader.onload = function(oFREvent){
-      imgPreview.src = oFREvent.target.result;
-    }
+      oFReader.onload = function(oFREvent){
+        imgPreview.src = oFREvent.target.result;
+      }
     }
 </script>
     
